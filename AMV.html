@@ -4,7 +4,7 @@
   <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, user-scalable=no" />
-      <title>Senpai&#x27;s Gallery - Home</title>
+      <title>Senpai&#x27;s Gallery - AMV</title>
       <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
       <link rel="stylesheet" href="public/lightslider/css/lightslider.min.css" />
       <link rel="stylesheet" href="public/videojs/video-js.min.css" />
@@ -29,7 +29,7 @@
         Breadcrumbs of parent albums
       -->
       <nav class="breadcrumbs">
-    <a class="breadcrumb-item" href="index.html">Home</a>
+    <a class="breadcrumb-item" href="index.html">Home</a>&nbsp;/&nbsp;<a class="breadcrumb-item" href="AMV.html">AMV</a>
       </nav>
     
     
@@ -37,27 +37,25 @@
         Nested albums, if any
       -->
       <div id="albums" class="justified-gallery">
-            <a href="AMV.html">
-              <img src="media/small/AMV/Human_Nature_Kenpachi_s_Words_Bleach__b0gXTSLwW0c_134.jpg" alt="">
-              <div class="caption" style="display: inline-block">
-                <h3>AMV</h3>
-                <div class="summary">1 video</div>
-              </div>
-            </a>
-            <a href="Wallpapers.html">
-              <img src="media/small/Wallpapers/Anime/fullmetal.jpg" alt="">
-              <div class="caption" style="display: inline-block">
-                <h3>Wallpapers</h3>
-                <div class="summary">1 album, 9 photos</div>
-              </div>
-            </a>
       </div>
     
       <!--
         All photos and videos
       -->
       <ul id="media" class="clearfix justified-gallery">
-      </ul>
+          
+          <div class="albumList"
+              data-sub-html=""
+              data-download-url="media/large/AMV/Human_Nature_Kenpachi_s_Words_Bleach__b0gXTSLwW0c_134.mp4"data-html="#media6"data-exthumbimage="media/thumbs/AMV/Human_Nature_Kenpachi_s_Words_Bleach__b0gXTSLwW0c_134.jpg"data-filename="Human_Nature_Kenpachi_s_Words_Bleach__b0gXTSLwW0c_134.mp4"><a href="media/large/AMV/Human_Nature_Kenpachi_s_Words_Bleach__b0gXTSLwW0c_134.mp4"><img
+                      src="media/small/AMV/Human_Nature_Kenpachi_s_Words_Bleach__b0gXTSLwW0c_134.jpg"
+                      width="533.3333333333333"
+                      height="300"alt="Human_Nature_Kenpachi_s_Words_Bleach__b0gXTSLwW0c_134.mp4"/>
+              </a>
+          
+                  <div class="video-overlay">
+                      <img src="public/play.png" />
+                  </div>
+          </div>  </ul>
     
       <!--
         Pagination
@@ -77,6 +75,12 @@
     </div>
     <!-- Video loader -->
     <div id="videos">
+          <div id="media6" style="display:none;">
+            <video class="lg-video-object lg-html5 video-js vjs-default-skin vjs-big-play-centered"  poster="media/large/AMV/Human_Nature_Kenpachi_s_Words_Bleach__b0gXTSLwW0c_134.jpg" preload="none" controls>
+              <source src="media/large/AMV/Human_Nature_Kenpachi_s_Words_Bleach__b0gXTSLwW0c_134.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video
+            </video>
+          </div>
     </div>
 
     <!-- jQuery -->
@@ -123,30 +127,6 @@
       });
     </script>
 
-      <script id="slider-js" data-interval="">
-        $(document).ready(function () {
-          let waitTime = 1000;
-
-          try {
-            waitTime = parseInt($("#slider-js").data("interval"));
-          } catch (e) {
-            console.error("Invalid speed value for slider: " + waitTime + "\n" + e);
-          }
-
-          $("#lightSlider").lightSlider({
-            auto: true,
-            loop: true,
-            item: 1,
-            gallery: true,
-            pause: waitTime,
-            onSliderLoad: (el) => {
-              el.lightGallery({
-                selector: "#lightSlider li"
-              })
-            }
-          });
-        });
-      </script>
 
 
   </body>
