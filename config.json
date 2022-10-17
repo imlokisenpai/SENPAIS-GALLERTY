@@ -6,7 +6,7 @@
   "sort-media-by": "filename",
   "download-photos": "copy",
   "cleanup": true,
-  "theme": "Midnight",
+  "theme": "flow",
   "css": "./custom.css",
   "footer": "tg/loki_senpai",
   "usage-stats": false
